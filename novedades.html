@@ -55,11 +55,11 @@
 
                 <nav class="nav-desk">
                     <ul>
-                        <li><a href="index.html #top" class="scroll">Inicio</a></li>
-                        <li><a href="index.html #nosotros" class="scroll">Nosotros</a></li>
-                        <li><a href="index.html #servicios" class="scroll">Servicios</a></li>
-                        <li class="active"><a href="#novedades" class="scroll">Novedades</a></li>
-                        <li><a href="index.html #contacto" class="scroll">Contacto</a></li>
+                        <li><a href="index.html #top">Inicio</a></li>
+                        <li><a href="index.html #nosotros">Nosotros</a></li>
+                        <li><a href="index.html #servicios">Servicios</a></li>
+                        <li class="active"><a href="#novedades">Novedades</a></li>
+                        <li><a href="index.html #contacto">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
@@ -68,18 +68,18 @@
 
     <nav class="nav-phone">
         <ul>
-            <li><a href="#top" class="scroll">Inicio</a></li>
-            <li><a href="#nosotros" class="scroll">Nosotros</a></li>
-            <li><a href="#servicios" class="scroll">Servicios</a></li>
-            <li><a href="#novedades" class="scroll">Novedades</a></li>
-            <li><a href="#contacto" class="scroll">Contacto</a></li>
+            <li><a href="index.html #top">Inicio</a></li>
+            <li><a href="index.html #nosotros">Nosotros</a></li>
+            <li><a href="index.html #servicios">Servicios</a></li>
+            <li><a href="index.html #novedades">Novedades</a></li>
+            <li><a href="index.html #contacto">Contacto</a></li>
         </ul>
     </nav>
     <!--**************************************************
                               MAIN
     	******************************************************-->
     <main>
-        <div class="about-page-title-bg">
+        <div class="news-page-title-bg">
             <div class="container">
                 <div class="page-title">
                     <h1>Novedades</h1>
@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <section class="section-space">
+        <section class="section-space-news-page">
             <div class="container">
                 <div class="news-page-content">
 
@@ -239,54 +239,11 @@
         </div>
     </footer>
 
-        <script src="assets/js/jquery-3.3.1.js"></script>
-        <script src="assets/js/slidereveal.js"></script>
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/slidereveal.js"></script>
+    <script src="assets/js/main.js"></script>
 
 
-        <script>
-            //STICKY NAVBAR! tiene en css la clas .sticky
-
-            $(document).ready(function() {
-			// grab the initial top offset of the navigation 
-		   	var stickyNavTop = $('.nav').offset().top;
-		   	
-		   	// our function that decides weather the navigation bar should have "fixed" css position or not.
-		   	var stickyNav = function(){
-			    var scrollTop = $(window).scrollTop(); // our current vertical position from the top
-			         
-			    // if we've scrolled more than the navigation, change its position to fixed to stick to top,
-			    // otherwise change it back to relative
-			    if (scrollTop > stickyNavTop) { 
-			        $('.nav').addClass('sticky');
-			    } else {
-			        $('.nav').removeClass('sticky'); 
-			    }
-			};
-
-			stickyNav();
-			// and run it again every time you scroll
-			$(window).scroll(function() {
-				stickyNav();
-			});
-		});
-        </script>
-
-     
-
-        <script>
-            //FUNCION DE MOSTRAR Y ESCONDER NAV PHONE
-             var slider = $('.nav-phone').slideReveal({
-                trigger: $("#trigger"),
-                position: "right",
-                overlay: true,
-                push: false,
-                width: 240
-            })
-
-            $("#hide-btn").click(function(){
-                slider.slideReveal("hide");
-            });
-        </script>
 
 </body>
 </html>

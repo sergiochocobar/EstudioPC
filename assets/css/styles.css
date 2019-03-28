@@ -500,7 +500,6 @@ header{
     padding: 25px;
     margin-bottom: 15px;
     cursor: pointer;
-    color: black;
 }
 
 .service-icon img{
@@ -516,6 +515,7 @@ header{
 .service-box h4{
     font-size: 18px;
     line-height: 20px;
+    color: black;
 }
 
 .service-box p{
@@ -651,11 +651,16 @@ header{
 
 .news-content .news-box .news-text span{
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 .news-content .news-box .news-text h5{
     font-size: 18px;
     margin: 10px 0 10px 0;
+}
+
+.news-content .news-box .news-text h5 a{
+    color: black;     
 }
 
 .news-content .news-box .news-text p{
@@ -666,21 +671,17 @@ header{
 .news-share{
     background-color: rgba(0,0,0,0.02);
     padding: 5px 10px;
-    border-bottom: 2px solid #2388ed;
+    border-bottom: 2px solid #2388ED;
 }
+
+/*.news-content .news-box img:hover .news-share{
+    border-bottom: 2px solid #2388ED;   
+}REVISAR!!!*/
 
 .news-share i{
     font-size: 14px;
-    color: #2388ed;
+    color: #2388ED;
     margin-right: 10px; 
-}
-
-.news-share i span{
-    font-family: 'Open Sans', sans-serif;
-    color: black;
-    font-size: 14px;
-    margin-left: 5px;
-    font-weight: 400;
 }
 
 .news-share a{
@@ -689,6 +690,14 @@ header{
     font-weight: 700;
     padding-left: 10px;
     float: right;
+}
+
+.news-share span{
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 14px; 
+    margin-left: 5px;
+    font-weight: 400; 
 }
 
 .news-more-btn{
@@ -714,6 +723,10 @@ header{
     .news-box:last-child{
         margin-bottom: 0;
     }    
+
+    .news-text{
+        height: 175px;
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -727,9 +740,17 @@ header{
     .news-box{
         margin-bottom: 0;
     }
+
+    .news-text{
+        height: 200px;
+    }
 }
 
 @media screen and (min-width: 1200px){
+    .news-text{
+        height: 187px;
+    }
+
     .news-more-btn a{
         font-size: 16px;
     }  
@@ -1118,7 +1139,17 @@ header{
     }
 }
 
-/*================== PAGINA NOTICIAS GRID  ===================*/
+/*================== NEWS PAGE STYLE (NOTICIAS EN GRID Y PAGINACION)===================*/
+.news-page-title-bg{
+    background: url('../img/news-grid-page/news-page-bg.jpg');
+    width: 100%;
+    height: 150px;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .news-page-content{
     display: grid;
@@ -1141,11 +1172,16 @@ header{
 
 .news-page-content .news-page-box .news-page-text span{
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 .news-page-content .news-page-box .news-page-text h5{
     font-size: 18px;
     margin: 10px 0 10px 0;
+}
+
+.news-page-content .news-page-box .news-page-text h5 a{
+    color: black;     
 }
 
 .news-page-content .news-page-box .news-page-text p{
@@ -1159,24 +1195,19 @@ header{
     border-bottom: 2px solid #2388ED;
 }
 
-.news-page-share a{
-    font-size: 16px;
-}
-
 .news-page-share i{
     font-size: 14px;
-    color: #2388ed;
+    color: #2388ED;
     margin-right: 10px; 
 }
 
-.news-page-share i span{
+.news-page-share span{
     font-family: 'Open Sans', sans-serif;
     color: black;
-    font-size: 14px;
+    font-size: 14px; 
     margin-left: 5px;
-    font-weight: 400;
+    font-weight: 400; 
 }
-
 
 .news-page-share a{
     font-family: 'Open Sans', sans-serif;
@@ -1184,6 +1215,7 @@ header{
     font-weight: 700;
     padding-left: 10px;
     float: right;
+    font-size: 16px;
 }
 
 .page-pagination{
@@ -1223,30 +1255,58 @@ header{
 }
 
 @media screen and (min-width: 768px){
+    .news-page-title-bg{        
+        height: 200px;     
+    }
+
     .news-page-content{
         grid-template-columns: 354px 354px;
         grid-column-gap: 30px;
         grid-row-gap: 30px;
     }
+
+    .news-page-text{
+        height: 175px;
+    }
 }
 
 
 @media screen and (min-width: 992px){
+    .news-page-title-bg{        
+        height: 280px;     
+    }
+
     .news-page-content{
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 30px;
         grid-row-gap: 45px;
     }
+
+    .news-page-text{
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .news-page-title-bg{        
+        height: 400px;     
+    }
+
+    .news-page-text{
+        height: 187px;
+    }
 }
 
 
-/*================== PAGINA DETALLES DE LA NOTICIAS ===================*/  
+/*================== NEWS DETAILS PAGE STYLE (SINGLE PAGE) (PAGINA ESTILOS DE NOTICIAS INVIVIDUALES)===================*/  
+.news-details-date span{
+    text-transform: uppercase;
+    font-size: 14px; 
+}
 
 .news-details-title h2{
-    font-size: 18px;
+    font-size: 22px;
 }   
-
-
 .news-details-line-title{
     border-bottom: 2px solid #2388ED;
     width: 100%;
@@ -1255,8 +1315,19 @@ header{
 
 .post-img img{
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
 }
+
+.news-details-text p{
+    margin-bottom: 15px; 
+}
+
+
+.section-space-news-page{
+    padding: 20px 0 20px 0;
+}
+ 
+
 
 @media screen and (min-width:768px){
     .news-details-title h2{
@@ -1265,13 +1336,18 @@ header{
 }
 
 @media screen and (min-width:992px){
+    .section-space-news-page{
+        padding: 50px 0 50px 0; 
+    }
+
     .news-details-title h2{
         font-size: 32px;
     }   
 }
 
 
-/*================== PAGINA SERVICIOS DETALLES ===================*/  
+
+/*================== PAGINA DE SERVICIOS DETALLES ===================*/ 
 
 .service-page-title-bg{
     background: url('../img/service-page/service-page-bg.jpg');

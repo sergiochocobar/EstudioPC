@@ -130,7 +130,7 @@
                     </div>
                     <div class="service-content">
                         <div class="service-row-one">
-                            <a class="service-box" href="#">
+                            <a class="service-box" href="servicios.html">
                                 <div class="service-icon">
                                     <img src="assets/img/services-icons/pyme-01.png" alt="">
                                 </div> 
@@ -139,7 +139,7 @@
                                 <p>- Tercerización de impuestos<br>- Tercerización de contabilidad<br>- Comercio exterior<br>- Mejora de procesos</p>
                             </a>    
 
-                            <a class="service-box" href="#">
+                            <a class="service-box" href="servicios.html">
                                 <div class="service-icon">
                                     <img src="assets/img/services-icons/monotributo-01.png"  alt="">
                                 </div>      
@@ -148,7 +148,7 @@
                                 <p>- Altas y recategorizaciones<br>- Liquidación de impuestos<br>- Atención de inspecciones</p>
                             </a>
 
-                            <a class="service-box" href="#">
+                            <a class="service-box" href="servicios.html">
                                 <div class="service-icon" >
                                     <img src="assets/img/services-icons/ong-01.png"  alt="">
                                 </div>          
@@ -301,90 +301,40 @@
 
         <script src="assets/js/jquery-3.3.1.js"></script>
         <script src="assets/js/slidereveal.js"></script>
-
-
+        <script src="assets/js/main.js"></script>
         <script>
-            //STICKY NAVBAR! tiene en css la clas .sticky
-
+        //NAVIGATION ANCHOR TYPE
             $(document).ready(function() {
-			// grab the initial top offset of the navigation 
-		   	var stickyNavTop = $('.nav').offset().top;
-		   	
-		   	// our function that decides weather the navigation bar should have "fixed" css position or not.
-		   	var stickyNav = function(){
-			    var scrollTop = $(window).scrollTop(); // our current vertical position from the top
-			         
-			    // if we've scrolled more than the navigation, change its position to fixed to stick to top,
-			    // otherwise change it back to relative
-			    if (scrollTop > stickyNavTop) { 
-			        $('.nav').addClass('sticky');
-			    } else {
-			        $('.nav').removeClass('sticky'); 
-			    }
-			};
 
-			stickyNav();
-			// and run it again every time you scroll
-			$(window).scroll(function() {
-				stickyNav();
-			});
-		});
-        </script>
+            var scrollLink = $('.scroll');
 
-        <script>
-            //NAVIGATION ANCHOR TYPE
-              $(document).ready(function() {
+            // Smooth scrolling
+            scrollLink.click(function(e) {
+            e.preventDefault();
+            $('body,html').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1000 );
+            });
 
-                var scrollLink = $('.scroll');
+            // Active link switching
+            $(window).scroll(function() {
+            var scrollbarLocation = $(this).scrollTop();
 
-                // Smooth scrolling
-                scrollLink.click(function(e) {
-                e.preventDefault();
-                $('body,html').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000 );
-                });
+            scrollLink.each(function() {
 
-                // Active link switching
-                $(window).scroll(function() {
-                var scrollbarLocation = $(this).scrollTop();
+                var sectionOffset = $(this.hash).offset().top - 100;
 
-                scrollLink.each(function() {
-
-                    var sectionOffset = $(this.hash).offset().top - 100;
-
-                    if ( sectionOffset <= scrollbarLocation ) {
-                    $(this).parent().addClass('active');
-                    $(this).parent().siblings().removeClass('active');
-                    }
-                })
-
-                })
-
-                })
-        </script>
-
-
-        <script>
-            //FUNCION DE MOSTRAR Y ESCONDER NAV PHONE
-             var slider = $('.nav-phone').slideReveal({
-                trigger: $("#trigger"),
-                position: "right",
-                overlay: true,
-                push: false,
-                width: 240
+                if ( sectionOffset <= scrollbarLocation ) {
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
+                }
             })
 
-            $("#hide-btn").click(function(){
-                slider.slideReveal("hide");
-            });
-        </script>
+            })
 
-        <script>
-           document.addEventListener('touchmove', function (event) {
-            if (event.scale !== 1) { event.preventDefault(); }
-            }, { passive: false });
-        </script>
+            });
+
+</script>
 
 </body>
 </html>
