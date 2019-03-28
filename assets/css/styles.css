@@ -666,13 +666,21 @@ header{
 .news-share{
     background-color: rgba(0,0,0,0.02);
     padding: 5px 10px;
-    border-bottom: 2px solid #2388ED;
+    border-bottom: 2px solid #2388ed;
 }
 
 .news-share i{
-    font-size: 20px;
-    color: rgba(0,0,0,0.02);
+    font-size: 14px;
+    color: #2388ed;
     margin-right: 10px; 
+}
+
+.news-share i span{
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: 400;
 }
 
 .news-share a{
@@ -1110,7 +1118,7 @@ header{
     }
 }
 
-/*================== NEWS PAGE STYLE ===================*/
+/*================== PAGINA NOTICIAS GRID  ===================*/
 
 .news-page-content{
     display: grid;
@@ -1151,11 +1159,24 @@ header{
     border-bottom: 2px solid #2388ED;
 }
 
+.news-page-share a{
+    font-size: 16px;
+}
+
 .news-page-share i{
-    font-size: 20px;
-    color: #2388ED;
+    font-size: 14px;
+    color: #2388ed;
     margin-right: 10px; 
 }
+
+.news-page-share i span{
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
 
 .news-page-share a{
     font-family: 'Open Sans', sans-serif;
@@ -1219,7 +1240,7 @@ header{
 }
 
 
-/*================== NEWS DETAILS PAGE STYLE ===================*/  
+/*================== PAGINA DETALLES DE LA NOTICIAS ===================*/  
 
 .news-details-title h2{
     font-size: 18px;
@@ -1248,3 +1269,134 @@ header{
         font-size: 32px;
     }   
 }
+
+
+/*================== PAGINA SERVICIOS DETALLES ===================*/  
+
+.service-page-title-bg{
+    background: url('../img/service-page/service-page-bg.jpg');
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-page-content{
+    display: grid;
+    grid-row-gap: 10px;  
+}
+
+/*INICIO SELECTORES*/
+
+.service-tabs li a{
+    display: block;
+    background: rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+}
+
+.tab-active{
+    background: #2388ED !important;
+    color: #fff !important;
+}  
+
+/*FIN SELECTORES*/
+
+.sector-title h2{
+    font-size: 20px;
+}
+
+.sector-page-title-line{
+    border-bottom: 2px solid #2388ED;
+    width: 40px;
+    margin: 10px 0 10px 5px;
+}
+
+.sector-page-text{
+    display: grid;
+    row-gap: 25px;
+}
+
+.sector-page-text ul{
+    list-style: disc;
+    margin-left: 25px;
+}
+
+.sector-page-text li{ /*service-page-content es el PADRE de toda la pagina*/
+    margin: 8px 0;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+    
+    .service-page-title-bg{
+        height: 200px;     
+    }
+
+    .service-page-content{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .service-page-title-bg{     
+        height: 280px;     
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    /*NUEVO*/
+
+    .service-tabs li a{
+        display: block;
+        background: rgba(0,0,0,0.05);
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        color: black;
+    }
+
+    .tab-active{
+        background: #2388ED !important;
+        color: #fff !important;
+    }  
+
+    .service-page-content{
+        grid-template-columns: 1fr 2fr;
+        column-gap: 60px;
+    }
+
+    /*FIN DE NUEVO*/
+
+    .service-page-title-bg{        
+        height: 400px;     
+    }
+
+    .sector-title h2{
+        font-size: 28px;
+    }
+    
+    .sector-page-title-line{
+        border-bottom: 2px solid #2388ED;
+        width: 60px;
+        margin: 15px 0 20px 5px;
+    }
+
+
+} 
