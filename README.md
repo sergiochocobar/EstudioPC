@@ -3,4 +3,4 @@
 - Mobile First
 
 ## Website
-[Ver Wesite](https://sergiodario.github.io/EstudioPC/)
+[Ver Website](https://sergiodario.github.io/EstudioPC/)
