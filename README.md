@@ -1,4 +1,4 @@
-# Estudio Contable Pérez Cliffe - Maquetación Web
+# Estudio Contable Pérez Cliffe - Desarrollo Front-end
 - HTML
 - CSS
 - Javascript
